@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pistachio</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="shortcut icon" href="favicon.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html {
+                cursor: url(http://cur.cursors-4u.net/sports/spo-1/spo16.ani), url(http://cur.cursors-4u.net/sports/spo-1/spo16.png), default !important;
+            }
+            body {
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                background-color: cyan;
+            }
+            .lmao {
+                width: 100%;
+                height: 100%;
+            }
+            #h {
+                width: 100%;
+                height: 6rem;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                margin-top: 50px;
+            }
+            
+            #bro {
+                position: absolute;
+                bottom: 0;
+                font-size: 72px;
+                font-family: 'Comic Sans MS';
+                animation: spinning 1s infinite;
+            }
+            
+            @keyframes spinning {
+                from {
+                    transform: rotate(0deg);
+                } to {
+                    transform: rotate(360deg);
+                }
+            }
+            @keyframes example {
+                0% { color: red; }
+                25% { color: orange; }
+                50% { color: yellow; }
+                75% { color: green; }
+                80% { color: blue; }
+                90% { color: purple; }
+                100% { color: magenta; }
+            }
+            
+            #beeMovie {
+                animation: example 1s infinite;
+                color: black;
+            }
+            @media (max-width: 900px) {
+                #bro {
+                    font-size: 36px;
+                }
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <div id="h">
+            <img src="https://cdn.britannica.com/76/196076-050-6138D55B/pistachios.jpg" class="lmao" />
+            <img src="https://api.time.com/wp-content/uploads/2015/02/imsis270-064.jpg?w=800&quality=85" class="lmao" style="height: 12rem;" />
+            <img src="https://thumbs.dreamstime.com/z/superman-26659262.jpg" class="lmao" style="height: 18rem;" />
+            <img src="https://i.gifer.com/S3CK.gif" class="lmao" />
+        </div>
+        <marquee id="beeMovie" class="rainbow-text" scrollamount="50">Download Raid Shadow Legends Today</marquee>
+        <h1 id="bro">Hi guys welcome to my first HTML page </h1>
+    </body>
+    <script>
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("beeMovie").innerHTML = this.responseText.split("O").join("C");
+          }
+        };
+        xhttp.open("GET", "beeMovie.txt", true);
+        xhttp.send();
+    </script>
+</html>
